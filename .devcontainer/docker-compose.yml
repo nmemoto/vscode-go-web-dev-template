@@ -1,0 +1,14 @@
+version: "3"
+services:
+  golang:
+    build:
+      context: .
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - ..:/workspace
+    command: sleep infinity
+  db:
+    image: postgres:11-alpine
