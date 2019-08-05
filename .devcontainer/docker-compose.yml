@@ -9,6 +9,7 @@ services:
       - seccomp:unconfined
     volumes:
       - ..:/workspace
+      - ${HOME}/.ssh:/root/.ssh-localhost:ro
     command: sleep infinity
   db:
     image: postgres:11-alpine
