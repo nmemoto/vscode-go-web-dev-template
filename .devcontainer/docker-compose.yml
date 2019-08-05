@@ -11,5 +11,7 @@ services:
       - ..:/workspace
       - ${HOME}/.ssh:/root/.ssh-localhost:ro
     command: sleep infinity
+    environment:
+      - GOROOT=/usr/local/go
   db:
     image: postgres:11-alpine

@@ -17,6 +17,26 @@
   // "shutdownAction": "none",
   // Uncomment the next line if you want to add in default container specific settings.json values
   // "settings":  { "workbench.colorTheme": "Quiet Light" },
+  "settings": {
+    "go.gopath": "/go",
+    "go.goroot": "/usr/local/go",
+    "go.inferGopath": true,
+    "go.useLanguageServer": true,
+    "go.alternateTools": {
+      "go-langserver": "gopls"
+    },
+    "go.languageServerExperimentalFeatures": {
+      "format": true,
+      "autoComplete": true
+    },
+    "[go]": {
+      "editor.snippetSuggestions": "none",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      },
+    },
+  },
   // Uncomment the next line to run commands after the container is created - for example installing git.
   "postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",
   // Add the IDs of any extensions you want installed in the array below.
