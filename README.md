@@ -1,4 +1,4 @@
-# vscode-golang-web-development-template
+# vscode-go-web-dev-template
 
 ## reference
 
