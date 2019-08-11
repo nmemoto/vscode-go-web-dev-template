@@ -3,6 +3,8 @@ services:
   golang:
     build:
       context: .
+    ports:
+      - "1323"
     cap_add:
       - SYS_PTRACE
     security_opt:

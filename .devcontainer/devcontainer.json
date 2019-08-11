@@ -4,12 +4,11 @@
   "name": "Golang & PostgreSQL",
   // Update the 'dockerComposeFile' list if you have more compose files or use different names.
   // The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
-  "dockerComposeFile": [
-    "docker-compose.yml"
-  ],
+  "dockerComposeFile": ["docker-compose.yml"],
   // The 'service' property is the name of the service for the container that VS Code should
   // use. Update this value and .devcontainer/docker-compose.yml to the real service name.
   "service": "golang",
+  "appPort": [1323],
   // The optional 'workspaceFolder' property is the path VS Code should open by default when
   // connected. This is typically a file mount in .devcontainer/docker-compose.yml
   "workspaceFolder": "/workspace",
@@ -34,13 +33,11 @@
       "editor.formatOnSave": true,
       "editor.codeActionsOnSave": {
         "source.organizeImports": true
-      },
-    },
+      }
+    }
   },
   // Uncomment the next line to run commands after the container is created - for example installing git.
   "postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",
   // Add the IDs of any extensions you want installed in the array below.
-  "extensions": [
-    "ms-vscode.Go"
-  ]
+  "extensions": ["ms-vscode.Go"]
 }
